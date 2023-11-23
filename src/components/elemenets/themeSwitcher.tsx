@@ -8,16 +8,16 @@ import { MdOutlineLightMode } from "react-icons/md";
 export default function ThemeSwitcher() {
   const { theme, toggleTheme } = useTheme();
 
+  let buttonClass = `flex px-5 grow justify-items-center items-center bg-gray-700
+  ${theme === "dark" ? "hover:text-yellow-500" : "hover:text-blue-500"}`;
+
   return (
     <>
-      <button
-        onClick={toggleTheme}
-        className="flex px-5 grow justify-items-center items-center bg-red-500 rounded-r bg-opacity-80 hover:bg-opacity-100"
-      >
+      <button onClick={toggleTheme} className={buttonClass}>
         {theme === "dark" ? (
-          <MdOutlineDarkMode className="w-7 h-7" />
-        ) : (
           <MdOutlineLightMode className="w-7 h-7" />
+        ) : (
+          <MdOutlineDarkMode className="w-7 h-7" />
         )}
       </button>
     </>

@@ -3,15 +3,16 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import LinksPanel from "../elemenets/linksPanel";
 
 export default function Intro() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center w-full scroll-mt-40"
+      className="flex flex-col items-center w-full scroll-mt-40 pb-12"
       aria-description="Section describing the most important information about Antoni"
     >
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center pb-4">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -31,7 +32,7 @@ export default function Intro() {
           />
         </motion.div>
         <motion.h3
-          className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-center"
+          className="mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-center"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -41,6 +42,7 @@ export default function Intro() {
           <span className="underline">React (Next.js)</span>.
         </motion.h3>
       </div>
+      <LinksPanel />
     </section>
   );
 }
