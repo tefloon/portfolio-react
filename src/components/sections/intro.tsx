@@ -9,10 +9,10 @@ export default function Intro() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center w-full scroll-mt-40 pb-12"
+      className="flex flex-col items-center w-full scroll-mt-40 pb-10"
       aria-description="Section describing the most important information about Antoni"
     >
-      <div className="flex flex-col items-center justify-center pb-4">
+      <div className="flex flex-col items-center justify-center pb-6">
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -28,7 +28,7 @@ export default function Intro() {
             height={192}
             quality={95}
             priority={true}
-            className="h-32 w-32 rounded-full object-cover border-slate-500 border-4 shadow-xl"
+            className="h-32 w-32 rounded-full object-cover dark:border-stone-300 border-neutral-700 border-4 shadow-xl"
           />
         </motion.div>
         <motion.h3
@@ -36,8 +36,10 @@ export default function Intro() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="font-bold">Hi, I'm Antek.</span> I'm a{" "}
-          <span className="font-bold">front-end</span> with{" "}
+          <span className="font-bold">
+            Hi, I'm <span className=" text-sky-400">Antek</span>.
+          </span>{" "}
+          I'm a <span className="font-bold">front-end</span> with{" "}
           <span className="font-bold">3 years</span> of experience with{" "}
           <span className="underline">React (Next.js)</span>.
         </motion.h3>

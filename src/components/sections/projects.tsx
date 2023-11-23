@@ -8,7 +8,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center w-full scroll-mt-40"
+      className="flex flex-col items-center w-full scroll-mt-24"
     >
       <SectionHeader header="My Projects" />
       <div className="flex flex-col gap-10">

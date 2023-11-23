@@ -19,7 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <ThemeContextProvider>
-        <body className={`${inter.className} min-h-screen`}>{children}</body>
+        <body
+          className={`${inter.className} min-h-screen dark:bg-neutral-800 dark:text-stone-200 text-neutral-800`}
+        >
+          {children}
+        </body>
       </ThemeContextProvider>
     </html>
   );

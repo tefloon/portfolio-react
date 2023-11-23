@@ -1,16 +1,22 @@
 import React from "react";
 import { roboto_mono } from "@/lib/fonts";
-import { TechnologyType } from "@/data/projectData";
+import { navColors, frontColors } from "@/data/colors";
 
-export default function Label({ name, important }: TechnologyType) {
+type LabelType = {
+  name: string;
+  important?: boolean;
+  color: string;
+};
+
+export default function Label({ name, important, color }: LabelType) {
   const labelClass = `
-    py-2 px-2 text-sm font-semibold uppercase text-gray-200 min-w-[6rem] text-center cursor-default rounded-md transition-all duration-500 ${
+    py-1 px-1 text-sm sm:text-md sm:px-2 sm:py-2 font-bold text-neutral-900 dark:text-white min-w-[9rem] text-center cursor-default rounded-md transition-all duration-500 ${
       roboto_mono.className
     } 
     ${
       important === true
-        ? `bg-blue-700 hover:bg-blue-600`
-        : "bg-gray-700 hover:bg-gray-600 dark:bg-gray-600 dark:hover:bg-gray-500"
+        ? `${color}`
+        : "border-2 border-neutral-900 dark:border-neutral-700"
     }
   `;
 
