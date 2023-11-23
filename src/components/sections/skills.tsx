@@ -1,7 +1,9 @@
 import React from "react";
-import SectionHeader from "../elemenets/sectionHeader";
-import { skillData, skillDataType } from "@/data/skillsData";
-import SkillSection from "../elemenets/skillSection";
+import SectionHeader from "../elemenets/layout/sectionHeader";
+import { skillData } from "@/data/skillsData";
+import { categories, CategoryType } from "@/data/navData";
+import SkillSection from "../elemenets/skills/skillSection";
+import { navColors } from "@/data/colors";
 
 export default function Skills() {
   const colors = [
@@ -13,9 +15,9 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center w-full scroll-mt-24"
+      className="flex flex-col items-center w-full scroll-mt-32"
     >
-      <SectionHeader header="My Skills" />
+      <SectionHeader {...categories[1]} />
       <div className="flex flex-col gap-10 w-full">
         {skillData.map((skillSection, index) => (
           <SkillSection

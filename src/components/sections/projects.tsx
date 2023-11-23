@@ -1,8 +1,8 @@
 import React from "react";
-import Project from "../elemenets/project";
+import Project from "../elemenets/projects/project";
 
 import { ProjectData } from "@/data/projectData";
-import SectionHeader from "../elemenets/sectionHeader";
+import SectionHeader from "../elemenets/layout/sectionHeader";
 
 export default function Projects() {
   return (

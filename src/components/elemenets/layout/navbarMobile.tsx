@@ -2,9 +2,9 @@
 
 import React, { useState } from "react";
 import ThemeSwitcher from "./themeSwitcher";
-import { links } from "@/data/navData";
+import { categories } from "@/data/navData";
 import { navColors } from "@/data/colors";
-import InfoToggle from "./infoToggle";
+import InfoToggle from "../infoToggle";
 
 // TODO: Hamburder menu for width < 1000px
 export default function Navbar() {
@@ -21,7 +21,7 @@ export default function Navbar() {
         <div className="grow max-w-[3rem]"></div>
         <div className="flex grow justify-items-center align-middle">
           <ul className="navlinks grow flex flex-row justify-around items-center px-5 py-2">
-            {links.map((link, index) => (
+            {categories.map((link, index) => (
               <li className={liClasses} key={index}>
                 <div
                   className={`flex flex-col items-center justify-center min-w-[6rem] font-semibold rounded-lg ${

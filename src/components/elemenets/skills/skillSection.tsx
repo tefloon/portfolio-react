@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { skillSectionType } from "@/data/skillsData";
-import Label from "./label";
+import Label from "../basic/label";
+import { motion } from "framer-motion";
 
 type SkillSectionProps = skillSectionType & { colorString: string };
 
@@ -11,11 +14,19 @@ export default function SkillSection({
   colorString,
 }: SkillSectionProps) {
   return (
-    <div className="pl-4 pr-14 sm:pr-10 sm:pl-12">
-      <h3 className="text-3xl">{category}</h3>
+    <div className="px-4 sm:px-12">
+      {/* <h3 className="text-3xl">{category}</h3> */}
+      <motion.h3
+        className="text-3xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, type: "tween" }}
+      >
+        {category}
+      </motion.h3>
       <hr className="border-b-1 border-neutral-300 pb-2" />
       {skills && (
-        <div className="grid  md:grid-auto-fit gap-2 px-2">
+        <div className="grid md:grid-auto-fit gap-2 px-2">
           {skills.map((skill, index) => (
             <Label
               key={index}

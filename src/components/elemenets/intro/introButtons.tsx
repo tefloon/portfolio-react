@@ -17,13 +17,13 @@ export default function LinksPanel() {
       </a>
       <a href="https://github.com/tefloon" target="_blank">
         <span className={normalButtonClass}>
-          <FaGithub className="group-hover:text-green-500" />
+          <FaGithub className="group-hover:text-green-500 dark:group-hover:text-green-400" />
           GitHub
         </span>
       </a>
       <a href="https://github.com/tefloon">
         <span className={normalButtonClass}>
-          <FaLinkedin className="group-hover:text-blue-500" />
+          <FaLinkedin className="group-hover:text-blue-500 dark:group-hover:text-blue-400" />
           LinkedIn
         </span>
       </a>

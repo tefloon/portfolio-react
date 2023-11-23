@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import TechnologyList from "./technologyList";
+import TechnologyList from "../technologyList";
 import { ProjectType } from "@/data/projectData";
 
 export default function Project({

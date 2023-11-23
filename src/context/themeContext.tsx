@@ -5,6 +5,7 @@ import React, {
   createContext,
   useContext,
   useLayoutEffect,
+  useEffect,
 } from "react";
 
 type Theme = "light" | "dark";
@@ -23,7 +24,7 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   const toggleTheme = () => {
     if (theme === "light") {

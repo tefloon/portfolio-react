@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import Label from "./label";
+import Label from "./basic/label";
 import { TechnologyType } from "@/data/projectData";
 
 type TechListProps = {
@@ -21,7 +21,7 @@ export default function TechnologyList({ technologies }: TechListProps) {
       }}
     >
       {technologies.map((technology, id) => (
-        <Label key={id} {...technology} />
+        <Label key={id} {...technology} color="#fff" />
       ))}
     </motion.div>
   );

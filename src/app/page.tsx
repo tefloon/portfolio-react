@@ -1,10 +1,8 @@
-"use client";
-
 import Intro from "@/components/sections/intro";
-import Navbar from "@/components/elemenets/navbar";
+import Navbar from "@/components/elemenets/layout/navbar";
 import Skills from "@/components/sections/skills";
 import Projects from "@/components/sections/projects";
-import VSpacer from "@/components/elemenets/vSpacer";
+import VSpacer from "@/components/elemenets/layout/vSpacer";
 import InfoPanel from "@/components/sections/infoPanel";
 import InfoToggle from "@/components/elemenets/infoToggle";
 
@@ -17,8 +15,8 @@ export default function Home() {
       <Skills />
       <VSpacer index={1} />
       {/* <VSpacer height={4} /> */}
-      <Projects />
-      <VSpacer index={2} />
+      {/* <Projects />
+      <VSpacer index={2} /> */}
     </main>
   );
 }
