@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./reset.css";
 import "./globals.css";
 import ThemeContextProvider from "@/context/themeContext";
+import Navbar from "@/components/elemenets/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth overflow-x-hidden">
       <ThemeContextProvider>
         <body
-          className={`${inter.className} min-h-screen dark:bg-neutral-800 dark:text-stone-200 text-neutral-800`}
+          className={`${inter.className} dark:bg-neutral-800 dark:text-stone-200 text-neutral-800`}
         >
           {children}
         </body>

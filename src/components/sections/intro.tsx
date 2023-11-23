@@ -9,7 +9,7 @@ export default function Intro() {
   return (
     <section
       id="home"
-      className="flex flex-col items-center w-full scroll-mt-40 pb-10"
+      className="flex flex-col items-center w-full scroll-mt-40 mt-0 pb-2"
       aria-description="Section describing the most important information about Antoni"
     >
       <div className="flex flex-col items-center justify-center pb-6">
@@ -32,16 +32,24 @@ export default function Intro() {
           />
         </motion.div>
         <motion.h3
-          className="mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-center"
+          className="mt-4 px-6 text-2xl font-medium !leading-[1.5] sm:text-3xl md:text-4xl text-center transition-all duration-200"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          <span className="font-bold">
-            Hi, I'm <span className=" text-sky-400">Antek</span>.
-          </span>{" "}
-          I'm a <span className="font-bold">front-end</span> with{" "}
-          <span className="font-bold">3 years</span> of experience with{" "}
-          <span className="underline">React (Next.js)</span>.
+          <span>
+            Hi, I'm{" "}
+            <span className="font-bold text-fuchsia-600 dark:text-rose-400">
+              Antek
+            </span>
+            . I'm a <span className="font-bold">front-end</span> with{" "}
+            <span style={{ whiteSpace: "nowrap" }}>
+              <span className="font-bold">3 years</span> of experience{" "}
+            </span>
+            <span style={{ whiteSpace: "nowrap" }}>
+              with <span className="underline">React (Next.js)</span>
+            </span>
+            .
+          </span>
         </motion.h3>
       </div>
       <LinksPanel />

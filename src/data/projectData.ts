@@ -11,7 +11,7 @@ export const ProjectData: ProjectType[] = [
       },
     ],
     technologies: [
-      { name: "NextJS", important: true },
+      { name: "Next.js", important: true },
       { name: "React", important: true },
       { name: "TypeScript", important: true },
       { name: "NextAuth", important: true },
@@ -28,7 +28,7 @@ export const ProjectData: ProjectType[] = [
       "Enim magna quis commodo eu tempor. Incididunt velit adipisicing eu exercitation culpa cillum labore laboris consectetur. Voluptate enim exercitation cillum dolor irure enim. Adipisicing non deserunt elit anim eiusmod enim aliqua Lorem sit anim ullamco esse minim enim. Ullamco ex cillum exercitation culpa. Aute ipsum sunt aute ea velit. Ex nulla laboris in duis est tempor ea ex culpa irure laborum.",
     links: [],
     technologies: [
-      { name: "NextJS", important: true },
+      { name: "Next.js", important: true },
       { name: "React", important: true },
       { name: "TypeScript", important: true },
       { name: "NextAuth", important: true },

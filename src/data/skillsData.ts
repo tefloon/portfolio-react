@@ -3,9 +3,8 @@ export const skillData = [
     category: "Front-End",
     skills: [
       { name: "React" },
-      { name: "NextJS 13.2+" },
+      { name: "Next.js 13.2+" },
       { name: "Svelte" },
-      { name: "SvelteKit" },
       { name: "Astro" },
       { name: "Wordpress" },
     ],

@@ -1,19 +1,10 @@
 import React from "react";
+import { navColors } from "@/data/colors";
 
-export default function VSpacer({
-  height,
-  color,
-}: {
-  height: number;
-  color?: string;
-}) {
+export default function VSpacer({ index = 0 }: { index?: number }) {
   return (
-    <div style={{ height: `${height}rem` }} className="flex items-center">
-      <div
-        className={`block border-r-2 h-full ${
-          color ? `${color}` : "border-gray-500 dark:border-gray-700"
-        } rounded-full`}
-      ></div>
+    <div className="flex flex-col items-center justify-items-center py-16 ">
+      <div className={`w-3 h-3 rounded-full ${navColors[index]}`}></div>
     </div>
   );
 }

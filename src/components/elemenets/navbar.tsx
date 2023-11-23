@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import ThemeSwitcher from "./themeSwitcher";
 import { links } from "@/data/navData";
 import { navColors } from "@/data/colors";
+import InfoToggle from "./infoToggle";
 
 // TODO: Hamburder menu for width < 1000px
 export default function Navbar() {
@@ -15,9 +16,8 @@ export default function Navbar() {
   const aClasses = "py-4 px-3 ";
 
   return (
-    <header className="w-[95%] max-w-[1000px] m-auto text-stone-200 bg-neutral-800 bg-opacity-90 dark:bg-neutral-950 dark:bg-opacity-100 sticky top-5 rounded-lg z-50">
-      <nav className="flex flex-row justify-between">
-        <div className="p-5 text"></div>
+    <header className="w-[95%] max-w-[1000px] mx-auto text-stone-200 bg-neutral-800 bg-opacity-90 dark:bg-neutral-950 dark:bg-opacity-100 top-5 rounded-lg mb-12 z-50 sticky">
+      <nav className=" flex flex-row justify-between select-none">
         <div className="grow max-w-[3rem]"></div>
         <div className="flex grow justify-items-center align-middle">
           <ul className="navlinks grow flex flex-row justify-around items-center px-5 py-2">
@@ -45,6 +45,7 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="grow max-w-[3rem]"></div>
+
         <div className="flex rounded">
           <ThemeSwitcher />
         </div>
