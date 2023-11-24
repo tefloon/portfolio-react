@@ -2,7 +2,7 @@
 
 import React from "react";
 import { skillSectionType } from "@/data/skillsData";
-import Label from "../basic/label";
+import SkillLabel from "./skillLabel";
 import { motion } from "framer-motion";
 
 type SkillSectionProps = skillSectionType & { colorString: string };
@@ -17,36 +17,46 @@ export default function SkillSection({
     <div className="px-4 sm:px-12">
       {/* <h3 className="text-3xl">{category}</h3> */}
       <motion.h3
-        className="text-3xl"
+        className="text-2xl md:text-3xl transition-all"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, type: "tween" }}
+        transition={{ duration: 0.5, type: "tween" }}
       >
         {category}
       </motion.h3>
       <hr className="border-b-1 border-neutral-300 pb-2" />
       {skills && (
-        <div className="grid md:grid-auto-fit gap-2 px-2">
+        <motion.div
+          className="grid md:grid-auto-fit gap-2 px-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, type: "tween" }}
+        >
           {skills.map((skill, index) => (
-            <Label
+            <SkillLabel
               key={index}
               name={skill.name}
               important={true}
               color={colorString}
             />
           ))}
-        </div>
+        </motion.div>
       )}
-      <div className="flex flex-row flex-wrap gap-2 py-2 px-2">
+      <motion.div
+        className="flex flex-row flex-wrap gap-2 py-2 px-2"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, type: "tween" }}
+      >
         {libraries.map((library, index) => (
-          <Label
+          <SkillLabel
             key={index}
             name={library.name}
             important={false}
             color={colorString}
           />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

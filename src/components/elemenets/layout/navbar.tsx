@@ -19,12 +19,12 @@ export default function Navbar() {
     <header className="w-[95%] max-w-[1000px] mx-auto text-stone-200 bg-neutral-800 bg-opacity-90 dark:bg-neutral-950 dark:bg-opacity-100 top-5 rounded-lg mb-12 z-50 sticky">
       <nav className=" flex flex-row justify-between select-none">
         <div className="grow max-w-[3rem]"></div>
-        <div className="flex grow justify-items-center align-middle">
+        <div className="flex grow justify-items-center align-middle ">
           <ul className="navlinks grow flex flex-row justify-around items-center px-5 py-2">
             {categories.map((category, index) => (
               <li className={liClasses} key={index}>
                 <div
-                  className={`flex flex-col items-center justify-center min-w-[6rem] font-semibold rounded-lg ${
+                  className={`flex flex-col items-center justify-center min-w-[6rem] font-semibold rounded-lg focus-within:outline focus-within:outline-offset-2 focus-within:outline-2  ${
                     category.color
                   } ${
                     category.name === currentSection
@@ -33,7 +33,7 @@ export default function Navbar() {
                   }`}
                 >
                   <a
-                    className={aClasses}
+                    className={`focus:outline-none ${aClasses}`}
                     href={category.id}
                     onClick={() => setCurrentSection(category.name)}
                   >

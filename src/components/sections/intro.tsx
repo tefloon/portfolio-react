@@ -30,27 +30,31 @@ export default function Intro() {
             className="h-32 w-32 rounded-full object-cover dark:border-stone-300 border-neutral-700 border-4 shadow-xl"
           />
         </motion.div>
-        <motion.h3
-          className="mt-4 px-6 text-2xl font-medium !leading-[1.5] sm:text-3xl md:text-4xl text-center transition-all duration-200"
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
+        <motion.div
+          className="mt-4 px-12 text-2xl font-medium !leading-[1.5] sm:text-3xl md:text-4xl text-center transition-all duration-200"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
           transition={{ ease: easeOut, duration: 0.2 }}
         >
-          <span>
-            Hi, I&apos;m{" "}
-            <span className="font-bold text-fuchsia-600 dark:text-rose-400">
+          <div className="pb-2">
+            Hi, my name is&nbsp;
+            <span className="font-bold text-fuchsia-500 dark:text-fuchsia-400">
               Antek
             </span>
-            . I &apos;m a <span className="font-bold">web developer</span> with{" "}
-            <span style={{ whiteSpace: "nowrap" }}>
-              <span className="font-bold">3 years</span> of experience{" "}
-            </span>
-            <span style={{ whiteSpace: "nowrap" }}>
-              with <span className="underline">React (Next.js)</span>
-            </span>
-            .
-          </span>
-        </motion.h3>
+            !
+          </div>
+          <div className="pt-5">
+            I&apos;m a developer with <b>3 years</b> of experience
+            <br />
+            with <u>React</u> and <u>Next.js</u>
+          </div>
+          <div className="pt-5">
+            I have <b>over 10 years</b> of experience in web development and
+            almost <b>15 years</b>
+            <br />
+            of programming practice.
+          </div>
+        </motion.div>
       </div>
       <LinksPanel />
     </section>

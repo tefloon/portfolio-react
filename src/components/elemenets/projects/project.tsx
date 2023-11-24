@@ -1,25 +1,57 @@
 "use client";
 
-import { motion } from "framer-motion";
 import React from "react";
 import TechnologyList from "../technologyList";
+import Image from "next/image";
+import Link from "next/link";
+
+import { motion } from "framer-motion";
 import { ProjectType } from "@/data/projectData";
+import { FaGithub } from "react-icons/fa";
 
 export default function Project({
   title,
   imageUrl,
+  color,
   description,
+  link,
   technologies,
 }: ProjectType) {
+  const normalButtonClass =
+    "flex flex-row font-semibold items-center gap-2 px-4 py-2 rounded-xl dark:bg-neutral-900 bg-neutral-400 hover:bg-neutral-950 hover:text-white hover:border-blue-900";
+
   return (
-    <motion.article className="flex flex-col w-full group bg-gray-300 text-gray-800 dark:bg-gray-700 dark:text-gray-300 rounded-xl">
+    <motion.article
+      className={`flex flex-col w-full group group/card cursor-default transition-colors duration-500 bg-neutral-300 drop-shadow-md shadow-neutral-800 text-neutral-950 dark:bg-neutral-900 dark:text-stone-200 rounded-xl`}
+    >
       <div className="grid grid-cols-3">
-        <div className="col-span-1 group-odd:order-2">{imageUrl}</div>
-        <div className="col-span-2 group-odd:order-1 p-5">
+        <div className="col-span-1 group-odd/card:order-2">
+          <Image
+            src={imageUrl}
+            alt={`Screenshot of the GymApp screen for editing a session`}
+            quality={95}
+            width={444}
+            height={487}
+            className="mt-5 px-5 py-2 group-hover/card:scale-110 transition-transform duration-500"
+          />
+        </div>
+        <div className="col-span-2 group-odd/card:order-1 p-5">
           <h3 className="text-center text-2xl py-2">{title}</h3>
           <p className="py-4 text-lg">{description}</p>
+          <h3 className="">Technologies used:</h3>
+          <div className="dark:border-b border-b-2 dark:border-blue-300 border-blue-400 mt-1"></div>
           <TechnologyList technologies={technologies} />
         </div>
+      </div>
+      <div id="footer" className="p-4">
+        <Link href={link} className="group group/ghlink">
+          <span
+            className={`${normalButtonClass} dark:bg-neutral-400 dark:text-neutral-900 dark:hover:bg-neutral-950 dark:hover:text-white`}
+          >
+            <FaGithub className="group-hover/ghlink:text-green-500 dark:group-hover/ghlink:text-green-400" />
+            Github repo
+          </span>
+        </Link>
       </div>
     </motion.article>
   );

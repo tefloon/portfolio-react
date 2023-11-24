@@ -3,14 +3,15 @@ import Project from "../elemenets/projects/project";
 
 import { ProjectData } from "@/data/projectData";
 import SectionHeader from "../elemenets/layout/sectionHeader";
+import { categories } from "@/data/navData";
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center w-full scroll-mt-24"
+      className="flex flex-col px-12 items-center w-full scroll-mt-32"
     >
-      <SectionHeader header="My Projects" />
+      <SectionHeader {...categories[2]} />
       <div className="flex flex-col gap-10">
         {ProjectData.map((project) => (
           <Project key={project.title} {...project} />

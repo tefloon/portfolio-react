@@ -11,12 +11,10 @@ export default function Home() {
     <main className="max-w-[1000px] mx-auto">
       <Navbar />
       <Intro />
-      <VSpacer index={0} />
+      <VSpacer />
       <Skills />
-      <VSpacer index={1} />
-      {/* <VSpacer height={4} /> */}
-      {/* <Projects />
-      <VSpacer index={2} /> */}
+      <VSpacer />
+      <Projects />
     </main>
   );
 }
