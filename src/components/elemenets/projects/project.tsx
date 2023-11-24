@@ -22,7 +22,7 @@ export default function Project({
 
   return (
     <motion.article
-      className={`flex flex-col w-full group group/card cursor-default transition-colors duration-500 bg-neutral-300 drop-shadow-md shadow-neutral-800 text-neutral-950 dark:bg-neutral-900 dark:text-stone-200 rounded-xl`}
+      className={`flex flex-col w-full group group/card cursor-default transition-colors duration-500 bg-neutral-300 drop-shadow-md shadow-neutral-800 text-neutral-950 dark:bg-neutral-900 rounded-xl`}
     >
       <div className="grid grid-cols-3">
         <div className="col-span-1 group-odd/card:order-2">
@@ -35,7 +35,7 @@ export default function Project({
             className="mt-5 px-5 py-2 group-hover/card:scale-110 transition-transform duration-500"
           />
         </div>
-        <div className="col-span-2 group-odd/card:order-1 p-5">
+        <div className="col-span-2 group-odd/card:order-1 p-5 dark:text-stone-200 ">
           <h3 className="text-center text-2xl py-2">{title}</h3>
           <p className="py-4 text-lg">{description}</p>
           <h3 className="">Technologies used:</h3>
