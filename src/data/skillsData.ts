@@ -1,7 +1,7 @@
 export const skillData = [
   {
     category: "Front-End",
-    skills: [
+    technologies: [
       { name: "React" },
       { name: "Next.js 13.2+" },
       { name: "Svelte" },
@@ -24,7 +24,7 @@ export const skillData = [
   },
   {
     category: "Web technologies",
-    skills: [
+    technologies: [
       { name: "TypeScript" },
       { name: "JavaScript" },
       { name: "HTML5" },
@@ -39,7 +39,7 @@ export const skillData = [
   },
   {
     category: "Programming environments & Languages",
-    skills: [
+    technologies: [
       { name: "Python" },
       { name: "React Native" },
       { name: "C#" },
@@ -51,7 +51,7 @@ export const skillData = [
   },
   {
     category: "Tools and systems",
-    skills: [],
+    technologies: [],
     libraries: [
       { name: "GIT" },
       { name: "GitHub" },

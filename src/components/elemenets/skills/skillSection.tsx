@@ -6,13 +6,13 @@ import SkillLabel from "./skillLabel";
 
 import { skillSectionType } from "@/data/skillsData";
 import { motion } from "framer-motion";
-import { roboto_slab } from "@/lib/fonts";
+import { roboto_s } from "@/lib/fonts";
 
 type SkillSectionProps = skillSectionType & { colorString: string };
 
 export default function SkillSection({
   category,
-  skills,
+  technologies,
   libraries,
   colorString,
 }: SkillSectionProps) {
@@ -20,7 +20,7 @@ export default function SkillSection({
     <div className="px-4 sm:px-12">
       {/* <h3 className="text-3xl">{category}</h3> */}
       <motion.h3
-        className={`text-xl md:text-2xl transition-all ${roboto_slab.className}`}
+        className={`text-xl md:text-2xl transition-all ${roboto_s.className}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, type: "tween" }}
@@ -28,17 +28,17 @@ export default function SkillSection({
         {category}
       </motion.h3>
       <hr className="border-b-1 border-neutral-300 pb-2" />
-      {skills && (
+      {technologies && (
         <motion.div
           className="grid md:grid-auto-fit gap-2 px-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, type: "tween" }}
         >
-          {skills.map((skill, index) => (
+          {technologies.map((technology, index) => (
             <SkillLabel
               key={index}
-              name={skill.name}
+              name={technology.name}
               important={true}
               color={colorString}
             />

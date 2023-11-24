@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.str1 {
+  /* -webkit-text-stroke: 0.5px rgba(89, 28, 98, 1); */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}

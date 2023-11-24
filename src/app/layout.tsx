@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Suspense } from "react";
+import { roboto_flex } from "@/lib/fonts";
 
 import ThemeContextProvider from "@/context/themeContext";
 import DarkModeComponent from "@/components/elemenets/basic/darkModeComponent";
 
 import "./globals.css";
 import "./reset.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "portfolio | Antoni Gawlikowski",
@@ -25,7 +22,7 @@ export default function RootLayout({
       <DarkModeComponent />
       <ThemeContextProvider>
         <body
-          className={`${inter.className} bg-neutral-200 text-neutral-800 dark:bg-neutral-800 dark:text-stone-200`}
+          className={`${roboto_flex.className} bg-neutral-200 text-neutral-700 dark:bg-neutral-800 dark:text-stone-200 transition-transform duration-200`}
         >
           {children}
         </body>

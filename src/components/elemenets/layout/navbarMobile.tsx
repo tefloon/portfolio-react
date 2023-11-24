@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import ThemeSwitcher from "./themeSwitcher";
 import { categories } from "@/data/navData";
 import { navColors } from "@/data/colors";
-import InfoToggle from "../infoToggle";
 
 // TODO: Hamburder menu for width < 1000px
 export default function Navbar() {

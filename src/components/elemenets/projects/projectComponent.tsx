@@ -39,7 +39,7 @@ export default function Project({
           <h3 className="text-center text-2xl py-2">{title}</h3>
           <p className="py-4 text-lg whitespace-pre-line">{description}</p>
           <h3 className="text-xl">Technologies used:</h3>
-          <div className="border-t-2 dark:border-blue-300 border-blue-400 mt-1 mr-28 bg-red-500"></div>
+          <div className="border-t-2 dark:border-t dark:border-blue-300 border-blue-400 mt-1 mr-28 bg-red-500"></div>
           <TechnologyList technologies={technologies} />
         </div>
       </div>

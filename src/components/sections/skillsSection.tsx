@@ -3,9 +3,8 @@ import SectionHeader from "../elemenets/layout/sectionHeader";
 import { skillData } from "@/data/skillsData";
 import { categories, CategoryType } from "@/data/navData";
 import SkillSection from "../elemenets/skills/skillSection";
-import { navColors } from "@/data/colors";
 
-export default function Skills() {
+export default function SkillsSection() {
   const colors = [
     "bg-sky-400  dark:bg-sky-600 ",
     "bg-blue-400 dark:bg-blue-600 ",
