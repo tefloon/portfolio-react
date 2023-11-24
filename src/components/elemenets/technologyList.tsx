@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import SkillLabel from "./skills/skillLabel";
 import { TechnologyType } from "@/data/projectData";
 import SimpleLable from "./projects/simpleLable";
 

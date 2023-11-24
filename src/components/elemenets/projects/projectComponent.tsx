@@ -37,16 +37,16 @@ export default function Project({
         </div>
         <div className="col-span-2 group-odd/card:order-1 p-5 dark:text-stone-200 ">
           <h3 className="text-center text-2xl py-2">{title}</h3>
-          <p className="py-4 text-lg">{description}</p>
-          <h3 className="">Technologies used:</h3>
-          <div className="dark:border-b border-b-2 dark:border-blue-300 border-blue-400 mt-1"></div>
+          <p className="py-4 text-lg whitespace-pre-line">{description}</p>
+          <h3 className="text-xl">Technologies used:</h3>
+          <div className="border-t-2 dark:border-blue-300 border-blue-400 mt-1 mr-28 bg-red-500"></div>
           <TechnologyList technologies={technologies} />
         </div>
       </div>
       <div id="footer" className="p-4">
         <Link href={link} className="group group/ghlink">
           <span
-            className={`${normalButtonClass} dark:bg-neutral-400 dark:text-neutral-900 dark:hover:bg-neutral-950 dark:hover:text-white`}
+            className={`${normalButtonClass} bg-neutral-400 dark:text-stone-200 dark:bg-neutral-950 dark:hover:bg-neutral-950  dark:hover:text-white`}
           >
             <FaGithub className="group-hover/ghlink:text-green-500 dark:group-hover/ghlink:text-green-400" />
             Github repo

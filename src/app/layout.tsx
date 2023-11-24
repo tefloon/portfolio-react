@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Suspense } from "react";
 
 import ThemeContextProvider from "@/context/themeContext";
 import DarkModeComponent from "@/components/elemenets/basic/darkModeComponent";
 
 import "./globals.css";
 import "./reset.css";
-import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 

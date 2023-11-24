@@ -46,7 +46,9 @@ export default function Intro() {
           <div className="pt-5">
             I&apos;m a developer with <b>3 years</b> of experience
             <br />
-            with <u>React</u> and <u>Next.js</u>
+            <span className="whitespace-nowrap">
+              with <u>React</u> and <u>Next.js</u>
+            </span>
           </div>
           <div className="pt-5">
             I have <b>over 10 years</b> of experience in web development and

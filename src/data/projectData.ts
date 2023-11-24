@@ -3,8 +3,11 @@ export const ProjectData: ProjectType[] = [
     title: "Gym App",
     imageUrl: "/images/projects/gymAppSession.png",
     color: "hover:bg-cyan-600 dark:hover:bg-cyan-400 ",
-    description:
-      "A simple but robust app for tracking progress at the gym. Uses Prisma and Supabase to store the workouts in Postrges database. Users can gin up and sighn in using a multitude of OAuth providers (gmail, GitHub, Facebook) as well as using the trtaditional email and password.",
+    description: `A simple but robust app for tracking progress at the gym. 
+
+Uses Prisma and Supabase to store the workouts in a Postrges database. 
+
+Users can sign up and sigh in using a multitude of OAuth providers (gmail, GitHub, Facebook) as well as using the trtaditional email and password.`,
     link: "https://github.com/tefloon",
     technologies: [
       { name: "Next.js" },

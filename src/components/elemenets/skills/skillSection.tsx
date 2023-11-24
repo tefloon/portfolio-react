@@ -1,9 +1,12 @@
 "use client";
 
 import React from "react";
-import { skillSectionType } from "@/data/skillsData";
+
 import SkillLabel from "./skillLabel";
+
+import { skillSectionType } from "@/data/skillsData";
 import { motion } from "framer-motion";
+import { roboto_slab } from "@/lib/fonts";
 
 type SkillSectionProps = skillSectionType & { colorString: string };
 
@@ -17,7 +20,7 @@ export default function SkillSection({
     <div className="px-4 sm:px-12">
       {/* <h3 className="text-3xl">{category}</h3> */}
       <motion.h3
-        className="text-2xl md:text-3xl transition-all"
+        className={`text-xl md:text-2xl transition-all ${roboto_slab.className}`}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, type: "tween" }}
