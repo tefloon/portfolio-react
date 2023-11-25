@@ -12,7 +12,7 @@ export default function Navbar() {
   const liClasses =
     "flex grow items-center justify-items-center self-stretch group";
 
-  const aClasses = `py-2 px-1 sm:py-4 sm:px-3 outline-none transition-all duration-200 ${roboto_s.className}`;
+  const aClasses = `py-2 px-1 sm:py-4 sm:px-3 outline-none transition-colors duration-0 ${roboto_s.className}`;
 
   return (
     <header className="hidden sm:block md:w-[95%] max-w-[1000px] mx-auto text-stone-200 bg-neutral-800 bg-opacity-90 dark:bg-neutral-950 dark:bg-opacity-90 top-0 dark:md:bg-opacity-100  md:top-5 md:rounded-lg mb-12 md:mb-16 z-50 sticky drop-shadow-lg  transition-all duration-200">
@@ -23,7 +23,7 @@ export default function Navbar() {
             {categories.map((category, index) => (
               <li className={liClasses} key={index}>
                 <div
-                  className={`flex flex-col items-center justify-center min-w-[6rem] font-semibold rounded-lg focus-within:outline focus-within:outline-offset-2 focus-within:outline-2  ${
+                  className={`flex flex-col items-center justify-center min-w-[6rem] font-semibold rounded-lg focus-within:outline focus-within:outline-offset-2 transition-all duration-200  ${
                     category.color
                   } ${
                     category.name === currentSection
@@ -32,7 +32,7 @@ export default function Navbar() {
                   }`}
                 >
                   <a
-                    className={`focus:outline-none ${aClasses}`}
+                    className={`focus:outline-none ${aClasses} transform-all delay-0`}
                     href={category.id}
                     onClick={() => setCurrentSection(category.name)}
                   >
