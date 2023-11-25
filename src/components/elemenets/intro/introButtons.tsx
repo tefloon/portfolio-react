@@ -10,7 +10,7 @@ export default function LinksPanel() {
   return (
     <div
       id="links-panel"
-      className="pt-4 flex flex-row items-center text-md sm:text-xl gap-5 text-stone-300 select-none"
+      className="pt-4 flex flex-row items-center text-xs sm:text-sm md:test-base gap-5 text-stone-300 select-none"
     >
       <a href="https://github.com/tefloon" className="group outline-none">
         <span className="flex flex-row font-semibold focus-visible: items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-violet-600 text-white dark:bg-white dark:text-neutral-950 dark:hover:bg-violet-600 dark:hover:text-white group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-violet-600">

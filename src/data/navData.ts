@@ -3,16 +3,16 @@ export const categories = [
     name: "Home",
     fullName: "",
     id: "#home",
-    color:
-      "bg-fuchsia-400 dark:bg-fuchsia-600 focus-within:outline-fuchsia-600",
-    border: "border-fuchsia-400 dark:border-fuchsia-600",
+    color: "bg-rose-400 dark:bg-rose-600 focus-within:outline-rose-600",
+    border: "border-rose-400 dark:border-rose-600",
   },
   {
     name: "Skills",
     fullName: "My Skills",
     id: "#skills",
-    color: "bg-rose-400 dark:bg-rose-600 focus-within:outline-rose-600",
-    border: "border-rose-400 dark:border-rose-600",
+    color:
+      "bg-fuchsia-400 dark:bg-fuchsia-600 focus-within:outline-fuchsia-600",
+    border: "border-fuchsia-400 dark:border-fuchsia-600",
   },
   {
     name: "Projects",

@@ -5,12 +5,15 @@ import React from "react";
 import { easeIn, easeOut, motion } from "framer-motion";
 import LinksPanel from "../elemenets/intro/introButtons";
 import { roboto_s } from "@/lib/fonts";
+import useColorInterpolation from "@/hooks/useColorInterpolation";
 
 export default function IntroSection() {
+  const color = useColorInterpolation("#a855f7", "#f97316", 10);
+
   return (
     <section
       id="home"
-      className="flex flex-col items-center w-full scroll-mt-40 mt-0 pb-2"
+      className="flex flex-col items-center w-full scroll-mt-40 mt-4 pb-2"
     >
       <div className="flex flex-col items-center justify-center pb-6">
         <motion.div
@@ -40,7 +43,8 @@ export default function IntroSection() {
           <div className="pb-4">
             Hi, my name is&nbsp;
             <span
-              className={`text-fuchsia-500 dark:text-fuchsia-400 str1 font-black transition-all duration-200`}
+              style={{ color: color }}
+              className={`str1 font-black transition-all duration-200`}
             >
               Antek
             </span>

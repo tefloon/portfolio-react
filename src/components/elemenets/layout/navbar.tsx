@@ -15,7 +15,7 @@ export default function Navbar() {
   const aClasses = `py-2 px-1 sm:py-4 sm:px-3 outline-none transition-all duration-200 ${roboto_s.className}`;
 
   return (
-    <header className="md:w-[95%] max-w-[1000px] mx-auto text-stone-200 bg-neutral-800 bg-opacity-90 dark:bg-neutral-950 dark:bg-opacity-90 top-0 dark:md:bg-opacity-100  md:top-5 md:rounded-lg mb-12 md:mb-16 z-50 sticky drop-shadow-lg  transition-all duration-200">
+    <header className="hidden sm:block md:w-[95%] max-w-[1000px] mx-auto text-stone-200 bg-neutral-800 bg-opacity-90 dark:bg-neutral-950 dark:bg-opacity-90 top-0 dark:md:bg-opacity-100  md:top-5 md:rounded-lg mb-12 md:mb-16 z-50 sticky drop-shadow-lg  transition-all duration-200">
       <nav className=" flex flex-row justify-between select-none text-sm sm:text-base transition-all duration-200">
         <div className="grow max-w-[3rem] hidden sm:block"></div>
         <div className="flex grow justify-items-center align-middle ">
