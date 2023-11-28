@@ -2,7 +2,7 @@ import React from "react";
 import SectionHeader from "../elemenets/layout/sectionHeader";
 import { skillData } from "@/data/skillsData";
 import { categories, CategoryType } from "@/data/navData";
-import SkillSection from "../elemenets/skills/skillSection";
+import SkillSection from "../elemenets/skills/skillUsedTech";
 
 export default function SkillsSection() {
   const colors = [
@@ -19,11 +19,12 @@ export default function SkillsSection() {
       <SectionHeader {...categories[1]} />
       <div className="flex flex-col gap-10 w-full">
         {skillData.map((skillSection, index) => (
-          <SkillSection
-            key={index}
-            {...skillSection}
-            colorString={colors[index % colors.length]}
-          />
+          <React.Fragment key={index}>
+            <SkillSection
+              {...skillSection}
+              colorString={colors[index % colors.length]}
+            />
+          </React.Fragment>
         ))}
       </div>
     </section>

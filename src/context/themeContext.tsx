@@ -38,7 +38,7 @@ export default function ThemeContextProvider({
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
 
     if (localTheme) {

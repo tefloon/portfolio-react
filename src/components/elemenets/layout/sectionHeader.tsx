@@ -27,7 +27,7 @@ export default function SectionHeader({
     <div>
       <h3
         ref={ref}
-        className={`px-2 text-center text-3xl md:text-4xl font-extrabold ${roboto_s.className}`}
+        className={`px-2 text-center text-3xl md:text-4xl font-extrabold  ${roboto_s.className}`}
       >
         {fullName}
       </h3>

@@ -29,9 +29,9 @@ export const categories = [
     border: "border-orange-400 dark:border-orange-600",
   },
   {
-    name: "Education",
-    fullName: "Education",
-    id: "#educaton",
+    name: "Contact",
+    fullName: "Contact",
+    id: "#contact",
     color: "bg-amber-400 dark:bg-amber-600 focus-within:outline-amber-600",
     border: "border-amber-400 dark:border-amber-600",
   },

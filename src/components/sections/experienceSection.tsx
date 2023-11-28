@@ -20,11 +20,11 @@ export default function ExperienceSection() {
       className="flex flex-col px-12 items-center w-full pb-8 scroll-mt-32 gap-10"
     >
       <SectionHeader {...categories[3]} />
-      <VerticalTimeline animate={false} lineColor="#171717">
+      <VerticalTimeline animate={false} lineColor="">
         {experienceData.map((item) => (
           <React.Fragment key={item.id}>
             <VerticalTimelineElement
-              className="dark:text-red-500"
+              className="dark:text-red-500 cursor-pointer select-none"
               icon={item.icon}
               iconClassName="timeline-icon"
               date={item.date}
