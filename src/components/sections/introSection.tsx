@@ -69,7 +69,7 @@ export default function IntroSection() {
             >
               over 10 years
             </b>{" "}
-            of experience in web development and almost{" "}
+            of experience with web development and almost{" "}
             <b
               className={`text-neutral-800 dark:text-white font-semibold transition-all duration-200`}
             >

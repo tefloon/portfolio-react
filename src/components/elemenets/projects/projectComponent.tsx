@@ -24,7 +24,7 @@ export default function Project({
     <motion.article
       className={`flex flex-col w-full group group/card cursor-default transition-colors duration-500 bg-neutral-300 drop-shadow-md shadow-neutral-800 text-neutral-950 dark:bg-neutral-900 rounded-xl`}
     >
-      <div className="grid grid-cols-1 sm:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 ">
         <div className="col-span-1 group-odd/card:order-2">
           <Image
             src={imageUrl}
@@ -36,14 +36,18 @@ export default function Project({
           />
         </div>
         <div className="col-span-2 group-odd/card:order-1 p-5 dark:text-stone-200 ">
-          <h3 className="text-center text-2xl py-2">{title}</h3>
-          <p className="py-4 text-lg whitespace-pre-line">{description}</p>
-          <h3 className="text-xl">Technologies used:</h3>
+          <h3 className="text-center text-2xl font-semibold py-2">{title}</h3>
+          <div className="py-4 text-md font-normal whitespace-pre-line">
+            {description.map((par) => (
+              <p className="notlast:pb-4">{par}</p>
+            ))}
+          </div>
+          <h3 className="text-xl pt-5">Technologies used:</h3>
           <div className="border-t-2 dark:border-t dark:border-blue-300 border-blue-400 mt-1 mr-28 bg-red-500"></div>
           <TechnologyList technologies={technologies} />
         </div>
       </div>
-      <div id="footer" className="p-4">
+      <div className="px-4 pb-4 pt-0">
         <Link href={link} className="group group/ghlink">
           <span
             className={`${normalButtonClass} bg-neutral-400 dark:text-stone-200 dark:bg-neutral-950 dark:hover:bg-neutral-950  dark:hover:text-white`}

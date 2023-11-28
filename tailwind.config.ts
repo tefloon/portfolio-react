@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 
+const plugin = require("tailwindcss/plugin");
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,7 +18,12 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("@shrutibalasa/tailwind-grid-auto-fit")],
+  plugins: [
+    require("@shrutibalasa/tailwind-grid-auto-fit"),
+    plugin(function ({ addVariant }: { addVariant: any }) {
+      addVariant("notlast", "&:not(:last-child)");
+    }),
+  ],
   darkMode: "class",
 };
 export default config;

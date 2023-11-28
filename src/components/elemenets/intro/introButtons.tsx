@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdDownloadForOffline } from "react-icons/md";
+import { IoIosMail } from "react-icons/io";
 
 export default function LinksPanel() {
   const normalButtonClass =
@@ -31,7 +32,7 @@ export default function LinksPanel() {
         </span>
       </a>
       <a
-        href="https://github.com/tefloon"
+        href="https://linkedin.com/"
         target="_blank"
         className="group outline-none"
       >
@@ -40,6 +41,18 @@ export default function LinksPanel() {
         >
           <FaLinkedin className="group-hover:text-blue-500 dark:group-hover:text-blue-400" />
           LinkedIn
+        </span>
+      </a>
+      <a
+        href="mailto:antoni.gawlikowski@gmail.com"
+        target="_blank"
+        className="group outline-none"
+      >
+        <span
+          className={`${normalButtonClass} group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-blue-600`}
+        >
+          <IoIosMail className="group-hover:text-orange-500 dark:group-hover:text-orage-400" />
+          Mail
         </span>
       </a>
     </div>

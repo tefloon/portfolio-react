@@ -12,7 +12,7 @@ type TechListProps = {
 export default function TechnologyList({ technologies }: TechListProps) {
   return (
     <motion.div
-      className="flex flex-row gap-2 w-full py-3 flex-wrap"
+      className="flex flex-row gap-2 w-full pt-3 flex-wrap"
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{

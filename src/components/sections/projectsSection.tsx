@@ -12,7 +12,7 @@ export default function ProjectsSection() {
       className="flex flex-col px-12 items-center w-full pb-8 scroll-mt-32"
     >
       <SectionHeader {...categories[2]} />
-      <div className="flex flex-col gap-10 mt-2">
+      <div className="flex flex-col gap-10 mt-4">
         {ProjectData.map((project) => (
           <Project key={project.title} {...project} />
         ))}
