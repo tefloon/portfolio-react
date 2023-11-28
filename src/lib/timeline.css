@@ -1,0 +1,32 @@
+.dark .vertical-timeline-element-content {
+  background-color: #171717;
+  color: #e7e5e4;
+  box-shadow: none;
+}
+
+.timeline-icon {
+  color: #404040;
+  background-color: none;
+  box-shadow: none;
+}
+.dark .timeline-icon {
+  color: #e7e5e4;
+}
+
+.vertical-timeline::before {
+  background: #d4d4d4;
+  width: 2px !important;
+  margin-left: 0.5px !important;
+}
+
+.dark .vertical-timeline::before {
+  background: #171717;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right: 7px solid #fff;
+}
+
+.dark .vertical-timeline-element-content-arrow {
+  border-right: 7px solid #171717;
+}

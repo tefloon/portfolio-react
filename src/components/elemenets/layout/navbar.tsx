@@ -4,10 +4,13 @@ import React, { useState } from "react";
 import ThemeSwitcher from "./themeSwitcher";
 import { categories } from "@/data/navData";
 import { roboto_s } from "@/lib/fonts";
+import { useAtom } from "jotai";
+import { currentSection } from "@/context/sectionState";
 
 // TODO: Hamburder menu for width < 1000px
 export default function Navbar() {
-  const [currentSection, setCurrentSection] = useState("Home");
+  // const [currentSection, setCurrentSection] = useState("Home");
+  const [selectedSection, setSelectedSection] = useAtom(currentSection);
 
   const liClasses =
     "flex grow items-center justify-items-center self-stretch group";
@@ -26,7 +29,7 @@ export default function Navbar() {
                   className={`flex flex-col items-center justify-center min-w-[6rem] font-semibold rounded-lg focus-within:outline focus-within:outline-offset-2 transition-all duration-200  ${
                     category.color
                   } ${
-                    category.name === currentSection
+                    category.name === selectedSection.name
                       ? "bg-opacity-100 dark:bg-opacity-100 dark:text-white text-neutral-950"
                       : "hover:bg-opacity-100 dark:hover:bg-opacity-100 dark:bg-opacity-0 bg-opacity-0 dark:hover:text-stone-200 hover:text-neutral-900"
                   }`}
@@ -34,7 +37,7 @@ export default function Navbar() {
                   <a
                     className={`focus:outline-none ${aClasses} transform-all delay-0`}
                     href={category.id}
-                    onClick={() => setCurrentSection(category.name)}
+                    onClick={() => setSelectedSection({ name: category.name })}
                   >
                     {category.name}
                   </a>

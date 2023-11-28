@@ -1,14 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { easeIn, easeOut, motion } from "framer-motion";
 import LinksPanel from "../elemenets/intro/introButtons";
 import { roboto_s } from "@/lib/fonts";
 import useColorInterpolation from "@/hooks/useColorInterpolation";
+import { useInView } from "react-intersection-observer";
+import { useAtom } from "jotai";
+import { currentSection } from "@/context/sectionState";
 
 export default function IntroSection() {
-  const color = useColorInterpolation("#a855f7", "#f97316", 10);
+  const color = useColorInterpolation("#a855f7", "#f97316", 5);
+
+  const { ref, inView } = useInView();
+  const [selectedSection, setSelectedSection] = useAtom(currentSection);
+
+  useEffect(() => {
+    if (inView) {
+      setSelectedSection({ name: "Home" });
+    }
+  }, [inView]);
 
   return (
     <section
@@ -25,6 +37,7 @@ export default function IntroSection() {
           }}
         >
           <Image
+            ref={ref}
             src="/images/AntoniGawlikowski_profile.png"
             alt="Profile picture"
             width={192}

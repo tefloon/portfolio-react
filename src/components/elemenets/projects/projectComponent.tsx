@@ -38,8 +38,8 @@ export default function Project({
         <div className="col-span-2 group-odd/card:order-1 p-5 dark:text-stone-200 ">
           <h3 className="text-center text-2xl font-semibold py-2">{title}</h3>
           <div className="py-4 text-md font-normal whitespace-pre-line">
-            {description.map((par) => (
-              <p className="notlast:pb-4">{par}</p>
+            {description.map((paragraph) => (
+              <p className="notlast:pb-4">{paragraph}</p>
             ))}
           </div>
           <h3 className="text-xl pt-5">Technologies used:</h3>

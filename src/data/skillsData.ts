@@ -13,7 +13,7 @@ export const skillData = [
       { name: "Prisma" },
       { name: "NextAuth" },
       { name: "NextUI" },
-      { name: "Jotai" },
+      { name: "Jōtai" },
       { name: "Zustand" },
       { name: "Redux" },
       { name: "zod" },

@@ -3,6 +3,7 @@ import Navbar from "@/components/elemenets/layout/navbar";
 import SkillsSection from "@/components/sections/skillsSection";
 import ProjectsSection from "@/components/sections/projectsSection";
 import VSpacer from "@/components/elemenets/layout/vSpacer";
+import ExperienceSection from "@/components/sections/experienceSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
       <SkillsSection />
       <VSpacer />
       <ProjectsSection />
+      <VSpacer />
+      <ExperienceSection />
+      <VSpacer />
     </main>
   );
 }

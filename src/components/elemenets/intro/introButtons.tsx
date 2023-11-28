@@ -11,10 +11,10 @@ export default function LinksPanel() {
   return (
     <div
       id="links-panel"
-      className="pt-4 flex flex-row items-center text-xs sm:text-sm md:test-base gap-5 text-stone-300 select-none"
+      className="pt-4 flex flex-row items-center text-xs sm:text-sm md:text-base lg:text-lg gap-5 text-stone-300 select-none"
     >
       <a href="https://github.com/tefloon" className="group outline-none">
-        <span className="flex flex-row font-semibold focus-visible: items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-violet-600 text-white dark:bg-white dark:text-neutral-950 dark:hover:bg-violet-600 dark:hover:text-white group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-violet-600">
+        <span className="flex flex-row font-semibold focus-visible: items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-violet-600 text-white dark:bg-white dark:text-neutral-950 dark:hover:bg-violet-600 dark:hover:text-white group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-violet-600 ">
           <MdDownloadForOffline />
           Download CV
         </span>
@@ -27,7 +27,7 @@ export default function LinksPanel() {
         <span
           className={`${normalButtonClass} group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-green-600`}
         >
-          <FaGithub className="group-hover:text-green-500 dark:group-hover:text-green-400 " />
+          <FaGithub className="hidden sm:block group-hover:text-green-500 dark:group-hover:text-green-400 " />
           GitHub
         </span>
       </a>
@@ -39,7 +39,7 @@ export default function LinksPanel() {
         <span
           className={`${normalButtonClass} group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-blue-600`}
         >
-          <FaLinkedin className="group-hover:text-blue-500 dark:group-hover:text-blue-400" />
+          <FaLinkedin className="hidden sm:block group-hover:text-blue-500 dark:group-hover:text-blue-400" />
           LinkedIn
         </span>
       </a>
@@ -49,9 +49,9 @@ export default function LinksPanel() {
         className="group outline-none"
       >
         <span
-          className={`${normalButtonClass} group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-blue-600`}
+          className={`${normalButtonClass} group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-orange-600`}
         >
-          <IoIosMail className="group-hover:text-orange-500 dark:group-hover:text-orage-400" />
+          <IoIosMail className="hidden sm:block group-hover:text-orange-500 dark:group-hover:text-orage-400" />
           Mail
         </span>
       </a>
