@@ -45,7 +45,7 @@ export default function Project({
             ))}
           </div>
           <h3 className="text-xl pt-5">Technologies used:</h3>
-          <div className="border-t-2 dark:border-t dark:border-blue-300 border-blue-400 mt-1 mr-28 bg-red-500"></div>
+          <div className="border-t-2 dark:border-t dark:border-blue-300 border-pink-400 mt-1 mr-28 bg-red-500"></div>
           <TechnologyList technologies={technologies} />
         </div>
       </div>

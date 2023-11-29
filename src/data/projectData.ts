@@ -8,7 +8,7 @@ export const ProjectData: ProjectType[] = [
       `Uses Prisma and Supabase to store the workouts in a Postrges database.`,
       `Users can sign up and sigh in using a multitude of OAuth providers (gmail, GitHub, Facebook) as well as using the trtaditional email and password.`,
     ],
-    link: "https://github.com/tefloon",
+    link: "https://github.com/tefloon/gym-app-next_v2",
     technologies: [
       { name: "Next.js" },
       { name: "React" },
@@ -21,24 +21,32 @@ export const ProjectData: ProjectType[] = [
     ],
   },
   {
-    title: "Drugi projekt",
-    imageUrl: "/images/projects/gymAppSession.png",
-    color: "hover:bg-blue-600 dark:hover:bg-blue-400 ",
-    description: [
-      "Enim magna quis commodo eu tempor. Incididunt velit adipisicing eu exercitation culpa cillum labore laboris consectetur. Voluptate enim exercitation cillum dolor irure enim. Adipisicing non deserunt elit anim eiusmod enim aliqua Lorem sit anim ullamco esse minim enim. Ullamco ex cillum exercitation culpa. Aute ipsum sunt aute ea velit. Ex nulla laboris in duis est tempor ea ex culpa irure laborum.",
-    ],
-    link: "",
-    technologies: [{ name: "Next.js" }],
-  },
-  {
-    title: "Trzeci projekt",
-    imageUrl: "/images/projects/gymAppSession.png",
+    title: "WebSockets Chat",
+    imageUrl: "/images/projects/chat.png",
     color: "hover:bg-purple-600 dark:hover:bg-purple-400 ",
     description: [
-      "Occaecat exercitation laborum sint cillum pariatur laborum labore elit. Esse ullamco ex enim sit commodo ipsum non laboris consectetur qui excepteur. Sint est in cupidatat magna eiusmod aute qui. Commodo tempor excepteur laborum commodo minim ea cupidatat est sit esse velit ullamco consequat. Excepteur eiusmod et nostrud irure nisi velit adipisicing duis nostrud in dolore.",
+      "A chat application build on top of WebSockets API",
+      "Text environment for auto-scrolling behaviour and content generation",
+      "Accompanied by a simple node.js WebSocket Server",
     ],
-    link: "",
-    technologies: [{ name: "Python" }, { name: "GitHub" }],
+    link: "https://github.com/tefloon/WebSockets",
+    technologies: [
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "WebSockets" },
+      { name: "Node.js" },
+    ],
+  },
+  {
+    title: "Mock Data Creator",
+    imageUrl: "/images/projects/mockResult.png",
+    color: "hover:bg-blue-600 dark:hover:bg-blue-400 ",
+    description: [
+      "A simple tool for creating fake polish personal data in JSON or CSV formats.",
+      "It works by randomly mixing and matching all the possible names, surnames and addresses of Polish citizens available in GUS' databases (they are public domain)",
+    ],
+    link: "https://github.com/tefloon/py_MockDataCreator",
+    technologies: [{ name: "Python" }],
   },
 ];
 

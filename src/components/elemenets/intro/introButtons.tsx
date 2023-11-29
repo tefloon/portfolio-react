@@ -13,7 +13,7 @@ export default function LinksPanel() {
       id="links-panel"
       className="pt-4 flex flex-row items-center text-xs sm:text-sm md:text-base lg:text-lg gap-5 text-stone-300 select-none sm:justify-around sm:flex-nowrap flex-wrap justify-center"
     >
-      <a href="https://github.com/tefloon" className="group outline-none">
+      <a href="/AntoniGawlikowski_CV.pdf" className="group outline-none">
         <span className="flex flex-row font-semibold focus-visible: items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-violet-600 text-white dark:bg-white dark:text-neutral-950 dark:hover:bg-violet-600 dark:hover:text-white group-focus:outline group-focus:outline-offset-2 dark:group-focus:outline-offset-4 group-focus:outline-4 outline-violet-600 ">
           <MdDownloadForOffline />
           Download CV

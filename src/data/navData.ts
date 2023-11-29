@@ -30,7 +30,7 @@ export const categories = [
   },
   {
     name: "Contact",
-    fullName: "Contact",
+    fullName: "Contact me",
     id: "#contact",
     color: "bg-amber-400 dark:bg-amber-600 focus-within:outline-amber-600",
     border: "border-amber-400 dark:border-amber-600",
