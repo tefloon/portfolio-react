@@ -21,7 +21,7 @@ export default function SectionHeader({
     if (inView) {
       setSelectedSection({ name: name });
     }
-  }, [inView]);
+  }, [inView, name, setSelectedSection]);
 
   return (
     <div>

@@ -20,7 +20,7 @@ export default function IntroSection() {
     if (inView) {
       setSelectedSection({ name: "Home" });
     }
-  }, [inView]);
+  }, [inView, setSelectedSection]);
 
   return (
     <section

@@ -10,9 +10,9 @@ const useColorInterpolation = (
   duration: number
 ) => {
   const [color, setColor] = useState(color1);
+  const timestep = useRef(0);
+  const direction = useRef(1); // 1 for forward, -1 for backward
   const prevTimestamp = useRef<number | null>(null);
-  let t = 0;
-  let direction = 1; // 1 for forward, -1 for backward
 
   useEffect(() => {
     const animationFrameId = requestAnimationFrame(animate);
@@ -21,18 +21,18 @@ const useColorInterpolation = (
       if (prevTimestamp.current !== null) {
         const deltaTime = (timestamp - prevTimestamp.current) / 1000; // Time in seconds
         const speed = 2 / duration; // Speed of the transition
-        t += direction * deltaTime * speed;
+        timestep.current += direction.current * deltaTime * speed;
 
-        if (direction > 0 && t >= 1) {
-          direction = -1;
-          t = 1;
-        } else if (direction < 0 && t <= 0) {
-          direction = 1;
-          t = 0;
+        if (direction.current > 0 && timestep.current >= 1) {
+          direction.current = -1;
+          timestep.current = 1;
+        } else if (direction.current < 0 && timestep.current <= 0) {
+          direction.current = 1;
+          timestep.current = 0;
         }
 
         const interpolator = d3.interpolateCubehelix(color1, color2);
-        setColor(interpolator(t));
+        setColor(interpolator(timestep.current));
       }
 
       prevTimestamp.current = timestamp;
